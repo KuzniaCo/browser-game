@@ -2,7 +2,7 @@ import path  from 'path';
 import express from 'express';
 import morgan from 'morgan';
 
-export const app:express.Application = express();
+export const app = express();
 
 import { router }  from './routes/index';
 
