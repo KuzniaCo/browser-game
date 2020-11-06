@@ -1,0 +1,40 @@
+.container{
+
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.container a{
+    text-decoration: none;
+    color: black;
+}
+.header{
+    margin-top: 200px;
+}
+.main{
+    margin-top: 50px;
+}
+.linput input{
+    margin-top: 10px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.btn{
+    margin-top: 30px;
+    height: 40px;
+    width: 320px;
+    border-radius: 15px;
+    background-color: #20B2AA;
+}
+.forgot{
+    margin-top: 20px;
+}
+.newAccount{
+    margin-top: 150px;
+}
