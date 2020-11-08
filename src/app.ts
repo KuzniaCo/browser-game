@@ -17,4 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', router);
 
+// tu zmienic nizej, p
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/DB')
+.then(() => console.log("Connected"))
+.catch((err:any) => console.error("Couldn't connect",err));
+const db = mongoose.connection;
