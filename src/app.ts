@@ -19,8 +19,8 @@ app.use('/', router);
 
 // tu zmienic nizej, p
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/DB')
+import mongoose from 'mongoose';
+mongoose.connect('mongodb://localhost:27017/DB', { useNewUrlParser: true })
 .then(() => console.log("Connected"))
-.catch((err:any) => console.error("Couldn't connect",err));
+.catch((err:any) => console.error(`Couldn't connect to database: ${err}`,err));
 const db = mongoose.connection;
