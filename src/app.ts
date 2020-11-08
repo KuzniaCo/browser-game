@@ -1,6 +1,7 @@
 import path  from 'path';
 import express from 'express';
 import morgan from 'morgan';
+import mongoose from 'mongoose';
 
 export const app = express();
 
@@ -19,7 +20,7 @@ app.use('/', router);
 
 // tu zmienic nizej, p
 
-import mongoose from 'mongoose';
+
 mongoose.connect('mongodb://localhost:27017/DB', { useNewUrlParser: true })
 .then(() => console.log("Connected"))
 .catch((err:any) => console.error(`Couldn't connect to database: ${err}`,err));
