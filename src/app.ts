@@ -20,8 +20,7 @@ app.use('/', router);
 
 // tu zmienic nizej, p
 
-
-mongoose.connect('mongodb://localhost:27017/DB', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/DB', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log("Connected"))
 .catch((err:any) => console.error(`Couldn't connect to database: ${err}`,err));
 const db = mongoose.connection;
