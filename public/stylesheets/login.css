@@ -26,15 +26,39 @@
     font-size: 15px;
 }
 .btn{
-    margin-top: 30px;
-    height: 40px;
-    width: 320px;
-    border-radius: 15px;
-    background-color: #20B2AA;
+    border: 5px solid black;
+    border-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .forgot{
-    margin-top: 20px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    background-color: cyan;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .newAccount{
-    margin-top: 150px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    background-color: greenyellow;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
