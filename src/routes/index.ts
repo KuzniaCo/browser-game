@@ -11,11 +11,11 @@ router.get('/character', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('loginView', { testejs: 'hi!' });
+  res.render('loginView');
 });
 
 router.get('/register', function(req, res, next) {
-  res.render('registerView', { testejs: 'hi!' });
+  res.render('registerView');
 });
 
 
