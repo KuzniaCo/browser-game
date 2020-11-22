@@ -10,4 +10,12 @@ router.get('/character', function(req, res, next) {
   res.render('character', { testejs: 'hi!' });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('loginView');
+});
+
+router.get('/register', function(req, res, next) {
+  res.render('registerView');
+});
+
 
