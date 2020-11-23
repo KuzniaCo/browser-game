@@ -8,9 +8,9 @@ export const app = express();
 import { router }  from './routes/index';
 
 // view engine setup
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', 'build/views');
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static('build/public/stylesheets'));
 
 app.use(morgan('dev'));
 app.use(express.json());
