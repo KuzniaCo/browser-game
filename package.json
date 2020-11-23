@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./build/server.js",
     "build": "tsc && cpx \"./views/*.ejs\" ./build/views",
-    "build-css": "postcss ./public/stylesheets/tailwind.css -o ./build/public/stylesheets/tailwind.css"
+    "build-css": "postcss ./public/stylesheets/tailwind.css -c ./tailwind.config.js -o ./build/public/stylesheets/tailwind.css"
   },
   "dependencies": {
     "@types/mongoose": "^5.7.37",
