@@ -4,12 +4,13 @@ export interface IGameCharacter extends mongoose.Document{
     name: string,
     level: number,
     healthLevel: number,
-    owner: string,
     power: number,
     attackSpeed: number,
     skills: Array,
-    numberOfFights: number,
-    wins: number
+    User: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    }
 }
 
 const GameCharacterSchema = new mongoose.Schema({
@@ -22,6 +23,7 @@ const GameCharacterSchema = new mongoose.Schema({
   skills: { type: Array },
   numberOfFights: { type: Number, required: true, default: 0 },
   wins: { type: Number, required: true, default: 0 }
+  User: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 });
 
 export const GameCharacter = mongoose.model<IGameCharacter>("GameCharacter", GameCharacterSchema);
