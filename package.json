@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./build/server.js",
+    "start": "npm run build && npm run serve",
+    "serve": "node ./build/server.js",
     "build": "npm run compile-typescript && npm run copy-views && npm run build-css",
     "compile-typescript": "tsc",
     "copy-views": "cpx \"./src/views/*.ejs\" ./build/views",
