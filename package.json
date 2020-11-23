@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./build/server.js",
-    "build": "tsc && cpx \"./views/*.ejs\" ./build/views",
-    "build-css": "postcss ./public/stylesheets/tailwind.css -c ./tailwind.config.js -o ./build/public/stylesheets/tailwind.css"
+    "start": "node ./build/server.js",
+    "build": "npm run compile-typescript && npm run copy-views && npm run build-css",
+    "compile-typescript": "tsc",
+    "copy-views": "cpx \"./src/views/*.ejs\" ./build/views",
+    "build-css": "postcss ./src/stylesheets/tailwind.css -c ./tailwind.config.js -o ./build/stylesheets/tailwind.css"
   },
   "dependencies": {
     "@types/mongoose": "^5.7.37",
