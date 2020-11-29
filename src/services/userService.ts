@@ -10,12 +10,12 @@ export class userService {
     return new Promise(async (resolve, reject) => {
       newUser
         .save()
-        .then((res) => resolve(res))
+        .then(() => resolve(newUser))
         .catch((err) => reject(err));
     });
   };
 
-  public static readUser = async (
+  public static getUserById = async (
     userID: mongoose.Types.ObjectId
   ): Promise<Array<IUser>> => {
     return new Promise(async (resolve, reject) => {
@@ -31,7 +31,7 @@ export class userService {
   ): Promise<IUser> => {
     return new Promise(async (resolve, reject) => {
       User.findOneAndUpdate({ _id: userID }, { $set: data }, { new: true })
-        .then((res) => resolve(res))
+        .then(() => resolve(data))
         .catch((err) => reject(err));
     });
   };
@@ -41,10 +41,10 @@ export class userService {
   ): Promise<string> => {
     return new Promise(async (resolve, reject) => {
       User.findOneAndDelete({ _id: userID })
-        .then((res) => resolve(`Removed user with ID ${userID}`))
+        .then(() => resolve(`Removed user with ID ${userID}`))
         .catch((err) =>
           reject(
-            `En ERROR has occurred while trying to delete a user with ID ${userID}`
+            `En ERROR has occurred while trying to delete a user with ID ${userID}\n`+err
           )
         );
     });
