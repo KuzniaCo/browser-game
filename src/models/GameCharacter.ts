@@ -7,7 +7,7 @@ export interface IGameCharacter extends mongoose.Document{
     owner: string,
     power: number,
     attackSpeed: number,
-    skills: Array,
+    skills: Array<String>,
     numberOfFights: number,
     wins: number
 }
