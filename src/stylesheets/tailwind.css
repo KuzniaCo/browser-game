@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.evil-choice{
+    @apply text-black mt-4 p-2 border-8 rounded-full border-black bg-blood hover:bg-black hover:text-crimson hover:border-gray-800 cursor-pointer;
+}
+
+.good-choice{
+    @apply text-aquamarine mt-4 p-2 border-8 rounded-full border-aquamarine bg-white hover:bg-aquamarine hover:text-white hover:border-gray-100 cursor-pointer
+}

@@ -6,11 +6,15 @@ export interface IGameCharacter extends mongoose.Document{
     healthLevel: number,
     power: number,
     attackSpeed: number,
+    ConnectGameCharacterWithUser
     skills: Array,
     User: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User"
     }
+    skills: Array<String>,
+    numberOfFights: number,
+    wins: number
 }
 
 const GameCharacterSchema = new mongoose.Schema({
