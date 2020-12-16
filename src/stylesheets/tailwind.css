@@ -9,3 +9,6 @@
 .good-choice{
     @apply text-aquamarine mt-4 p-2 border-8 rounded-full border-aquamarine bg-white hover:bg-aquamarine hover:text-white hover:border-gray-100 cursor-pointer
 }
+.inputs{
+    @apply mt-0 h-10 w-64 pl-4 text-sm border-solid border-2 rounded-full 
+}

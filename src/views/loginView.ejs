@@ -2,20 +2,20 @@
 <html>
   <head>
     <title>Logowanie</title>
-    <link rel='stylesheet' href='stylesheets/login.css' />
+    <link rel='stylesheet' href='stylesheets/tailwind.css' />
   </head>
   <body>
-    <div class="container">
-        <div class="header">
+    <div class="container h-full w-full block mx-auto text-center no-underline text-black ">
+        <div class="header mt-32 text-xl font-bold mb-1">
             <h2>Member login</h2>
         </div>
-        <div class="main">
+        <div class="main mt-20">
           <form method="post">
-            <div class="linput"> <input type="email" placeholder="email"></div>
-            <div class="linput"> <input type="password" placeholder="password"></div>
-            <button class="btn" type="submit">LOGIN</button>
-            <div class="forgot"><a href="#">Forgot password?</a></div>
-            <div class="newAccount"><a href="#">Create new Account</a></div>
+            <div class="linput"> <input type="email" class="inputs mb-2" placeholder="email"></div>
+            <div class="linput"> <input type="password" class ="inputs " placeholder="password"></div>
+            <button class="btn mt-5 h-10 w-64 rounded-full bg-blue-400 " type="submit">LOGIN</button>
+            <div class="forgot text-sm mt-5 font-semibold"><a href="#">Forgot password?</a></div>
+            <div class="newAccount text-sm mt-32 font-semibold"><a href="#">Create new Account</a></div>
           </form>
         </div>
     </div>
