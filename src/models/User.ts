@@ -5,7 +5,11 @@ export interface IUser extends mongoose.Document{
     email: string,
     password: string,
     registrationDate?: Date,
-    lastLoggedIn?: Date
+    lastLoggedIn?: Date,
+    GameCharacter: {
+      type: mongoose.Schema.Types.ObjectId,
+      gameCharacterId: string,
+    }
 }
 
 const UserSchema = new mongoose.Schema({
@@ -14,6 +18,7 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true},
   registrationDate: Date,
   lastLoggedIn: Date,
+  GameCharacter: { type: mongoose.Schema.Types.ObjectId, gameCharacterId: String }
   // Concept of additional ID has been left for further discussion
   // ID: Number
 });
