@@ -1,14 +1,12 @@
 import express from 'express';
 export const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const controller = require('../controllers/index');
 
-router.get('/character', function(req, res, next) {
-  res.render('character', { testejs: 'hi!' });
-});
+/* GET home page. */
+router.get('/', controller.get_Homepage );
+
+router.get('/character', controller.get_Character );
 
 router.get('/login', function(req, res, next) {
   res.render('loginView');
